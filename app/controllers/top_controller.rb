@@ -1,0 +1,6 @@
+class TopController < ApplicationController
+
+
+
+
+end

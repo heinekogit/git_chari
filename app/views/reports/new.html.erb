@@ -1,0 +1,17 @@
+
+<%= form_for(@report, :url => {:action => 'create'}) do |f| %>
+    <div class="field">
+        <p><%= f.label :photo %></p>
+        <p><%= f.file_field :photo %></p>
+        <p><%= f.label :caption %></p>
+      <p><%= f.text_area :caption %></p>
+        <p><%= f.label :post %></p>
+      <p><%= f.text_area :post %></p>
+      <%= f.hidden_field :course_id %>
+
+         <%= f.submit "書き込む" %>
+    </div>
+<% end %>
+
+<p><%= link_to "トップページ", root_path %></p>
+

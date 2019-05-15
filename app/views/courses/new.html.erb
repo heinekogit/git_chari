@@ -1,0 +1,22 @@
+<%= form_for(@course, :url => {:action => 'create'}) do |f| %>
+    <div class="field">
+
+        <p><%= f.label :title %></p>
+        <p><%= f.text_area :title %></p>
+        <p><%= f.label :place %></p>
+        <p><%= f.text_area :place %></p>
+
+        <p><%= f.label :map %></p>
+        <p><%= f.text_area :map %></p>
+        <p><%= f.label :detail %></p>
+        <p><%= f.text_area :detail %></p>
+        <p><%= f.label :distance %></p>
+        <p><%= f.text_area :distance %></p>
+        <p><%= f.label :record_date %></p>
+        <p><%= f.text_area :record_date %></p>
+
+         <%= f.submit "書き込む" %>
+    </div>
+<% end %>
+
+<p><%= link_to "トップページ", root_path %></p>

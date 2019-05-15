@@ -1,7 +1,12 @@
-class CourseController < ApplicationController
+class CoursesController < ApplicationController
     
     def index
         @course = Course.all
+    end
+    
+    def show
+        @course = Course.find(params[:id])
+        @reports = Report.where(course_id: @course.id)
     end
     
     def new
@@ -10,7 +15,7 @@ class CourseController < ApplicationController
     
     def create
         Course.create(course_params)
-        redirect_to root
+        redirect_to :root
     end
     
     
@@ -20,4 +25,5 @@ class CourseController < ApplicationController
     
     end
     
+
 end

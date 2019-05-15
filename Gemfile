@@ -68,6 +68,14 @@ gem 'sprockets', '3.7.2'
 gem 'hirb'
 gem 'hirb-unicode'
 
+gem 'devise'
+
+gem 'rails-i18n', '~> 5.1' # For 5.0.x, 5.1.x and 5.2.x
+
+gem 'mini_magick'
+
+gem 'aws-sdk-s3'
+
 
 
 

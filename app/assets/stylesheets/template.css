@@ -1,0 +1,186 @@
+/* この間がコメント */
+
+/*  
+box1がタイトル
+box2がメニューバー
+box3がコンテンツ
+box4がサイドバー
+box5が底
+ */
+
+
+
+/*  入れ子の構造的記述　----------------------------------------------------  */
+
+@media (min-width: 768px) {
+    .boxA:after { 
+        content: "";
+        display: block;
+        clear :none
+    }
+    .box3 {
+        float: left;
+        width: 70%
+    }
+    .box4 {
+        float: left;
+        width: 30%;
+        background-color: #eeeeee
+    }
+}    
+
+/*  boxのデザイン　----------------------------------------------------  */
+
+    .box1 {
+        padding-left: 10px;
+	}
+    .box2 {
+        background-color: #FFBBFF
+    }
+    .box3 {
+        padding-left: 20px;
+        padding-right: 50px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box
+    }
+	.box5 {
+		border-top: solid 1px #dddddd;
+		float: left;
+		width: 100%;
+		background-color: #FFBBFF
+        }
+
+
+
+/*  デザイン　----------------------------------------------------  */
+
+
+    .profile {
+        background-color: #ffffff
+    }
+
+
+/*  デザイン　----------------------------------------------------  */
+
+.box1 h1 a {
+    color: #000000;
+    text-decoration: none
+    }
+.box1 h1 {
+    margin :0;
+    font-size :40px
+    }
+.box1 p {
+    margin: 0;
+    font-size: 16px
+    }
+
+.menu ul  {
+    margin: 0;
+    padding: 0;
+    list-style: none
+    /*text-align: right; */
+    }
+.menu li a {
+    display: block;
+    padding: 5px;
+    color: #000000;
+    font-size: 14px;
+    text-decoration: none
+    }
+.menu li a:hover {
+    background-color: #eeeeee
+    }
+.menu ul:after {
+    content: "";
+    display: block;
+    clear: both
+    }
+.menu li {
+    float: left;
+    width: auto
+    }
+
+
+.kiji h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px
+    }
+.kiji p {
+    margin-top: 0;
+    margin-bottom: 20px
+    }
+
+
+.sidemenu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+    }
+.sidemenu li a {
+    display: block;
+    padding: 5px;
+    color: #000000;
+    font-size: 14px;
+    text-decoration: none
+    }
+.sidemenu li a:hover {
+    background-color: #eeeeee
+    }
+.sidemenu h1 {
+    margin-top: 0;
+    margin-bottom: 10px; 
+    border-bottom: dotted 2px #dddddd;
+    color: #666666;
+    font-size: 18px
+}
+
+
+/*  未分類　----------------------------------------------------  */
+
+.search_box {
+    padding: 10px;
+	background-color: #ffffff
+	}
+
+
+
+/*  未定義　----------------------------------------------------  */
+
+/*  フォーム用　------------------- */
+.cp_iptxt {
+	position: relative;
+	width: 80%;
+	margin: 40px 3%;
+}
+.cp_iptxt input[type='text'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.3em;
+	transition: 0.3s;
+	letter-spacing: 1px;
+	color: #aaaaaa;
+	border: 1px solid #1b2538;
+	border-radius: 4px;
+}
+.ef input[type='text']:focus {
+	border: 1px solid #da3c41;
+	outline: none;
+	box-shadow: 0 0 5px 1px rgba(218,60,65, .5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

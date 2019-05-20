@@ -25,7 +25,7 @@ box5が底
     .box4 {
         float: left;
         width: 30%;
-        background-color: #eeeeee
+        background-color: #ffffff
     }
 }    
 
@@ -45,10 +45,12 @@ box5が底
         box-sizing: border-box
     }
 	.box5 {
+        padding: 10px;
 		border-top: solid 1px #dddddd;
 		float: left;
 		width: 100%;
-		background-color: #FFBBFF
+		background-color: #FFBBFF;
+        margin: 0px 0px 10px 0px
         }
 
 
@@ -82,9 +84,20 @@ box5が底
     list-style: none
     /*text-align: right; */
     }
+.menu li {
+    display: block;
+    float: left;
+    width: auto;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #808080;
+    font-size: 14px;
+    text-decoration: none
+    }
 .menu li a {
     display: block;
-    padding: 5px;
+    /*padding: 5px;*/
     color: #000000;
     font-size: 14px;
     text-decoration: none
@@ -97,20 +110,55 @@ box5が底
     display: block;
     clear: both
     }
-.menu li {
-    float: left;
-    width: auto
-    }
 
+
+.special {
+    border: 1px solid #000000;
+    padding: 20px;
+    margin: 10px 0px 10px 0px;
+}
+
+.kiji {
+    border: 1px solid #000000;
+    padding: 20px;
+    margin: 10px 0px 10px 0px;
+}
 
 .kiji h1 {
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 24px
     }
+
 .kiji p {
     margin-top: 0;
-    margin-bottom: 20px
+    margin-bottom: 10px
+    }
+
+.tweet {
+    border: 3px solid #66CCFF;
+    padding: 10px;
+    margin: 20px 20px 10px 20px;
+}
+
+.tweet p {
+    margin-top: 0;
+    margin-bottom: 5px
+    }
+
+
+
+.search-box {
+    border: 1px solid #000000;
+    padding: 20px;
+    margin: 10px 0px 10px 0px;
+}
+
+
+.sidemenu  {
+    padding: 20px;
+    margin: 10px 0px 10px 0px;
+    background-color: #eeeeee
     }
 
 
@@ -140,10 +188,6 @@ box5が底
 
 /*  未分類　----------------------------------------------------  */
 
-.search_box {
-    padding: 10px;
-	background-color: #ffffff
-	}
 
 
 

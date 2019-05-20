@@ -1,10 +1,11 @@
+
 <!-- -------------------------　タイトルバー表示　------------------------- -->
-<% provide :title, " | 公開ページ" %>
+<% provide :title, " | マイページ" %>
 
 <!-- -------------------------　タイトル　------------------------- -->
 <div class="box1">
     <h1><a href="/">Chari</a></h1>
-<p><%= "＜公開ページ（一覧）＞" %><p>
+<p><%= "＜#{@nickname} さんのマイページ＞" %><p>
 </div>
 
 <!-- -------------------------　ナビゲーションバー　------------------------- -->
@@ -19,10 +20,8 @@
     <li><%= link_to "書き込む", new_course_path %></li>
     <li><%= link_to "サインアウト", destroy_user_session_path, method: :delete %></li>
 <% else %>
-    <li><%= link_to "トップページ", root_path %></li>
-    <li><%= link_to "公開ページ", "/courses" %></li>
-    <li>マイページ</li>
-    <li>書き込む</li>
+    <li><%= link_to "書き込む", new_user_session_path %></li>
+    <li><%= link_to "マイページ", new_user_session_path %></li>
     <li><%= link_to "サインイン", new_user_session_path %></li>
 <% end %>
 
@@ -30,50 +29,35 @@
 </nav>
 </div>
 
-
-
 <!-- -------------------------　コンテンツ　------------------------- -->
 <div class="A">
     <div class="box3">
 
 
-<% @course.each do |cs| %>
+
+
+
+<% @courses.each do |cs| %>
 <article class="kiji">
     <p>タイトル：<%= cs.title %></p>
-    <p>地　　域：<%= cs.place %></p>
-    <p>地　　図：<%= cs.map %></p>
+    <p>場　　所：<%= cs.place %></p>
     <p>詳　　細：<%= cs.detail %></p>
     <p>距　　離：<%= cs.distance %>km</p>
-    <p>日　　付：<%= cs.record_date %></p>
-    <p>nickname：<%= cs.user.nickname %></p>
-    <p><%= link_to "詳細", "/courses/#{cs.id}" %></p>   <!-- showの表示（showは書かなくてよい） -->
-    <p>　I D　　：<%= cs.id %></p>
 
-    <p><%= link_to "記事をUPする", "/courses/#{cs.id}/reports/new" %></p>
-    <p>オリジナル：＿＿＿＿＿</p>
 </article>
 <% end %>
 
 
-
-
 <!-- ----------　ページネーション　----------- -->
-<div>
-    ページネーション
-</div>
-<hr>
-
-    </div>
-
+ </div>
 
 <!-- -------------------------　サイドバー　------------------------- -->
 <div class="box4">
-        
+
+
 <div class="search-box">       
 検索ボックス
 </div> 
-
-
 
 	<aside class="sidemenu">
 		<h1>マイページ</h1>
@@ -101,3 +85,4 @@
 リンク：<a href="">HTMLページへ</a>
 <div>運営：Wordscape</div>
 </div>
+

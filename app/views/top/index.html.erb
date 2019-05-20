@@ -5,21 +5,25 @@
 <!-- -------------------------　タイトル　------------------------- -->
 <div class="box1">
     <h1><a href="/">Chari</a></h1>
-<p><%= "＜トップページ＞" %><p>
+<p><%= "＜トップページ（レコメンド）＞" %><p>
 </div>
 
 <!-- -------------------------　ナビゲーションバー　------------------------- -->
 
 <div class="box2">
-    <nav class="menu">
-        <ul>
+<nav class="menu">
+<ul>
 <% if user_signed_in? %>
     <li><%= link_to "トップページ", root_path %></li>
+    <li><%= link_to "公開ページ", "/courses" %></li>
+    <li><a href="/users/<%= current_user.id %>">マイページ</a></li>
     <li><%= link_to "書き込む", new_course_path %></li>
     <li><%= link_to "サインアウト", destroy_user_session_path, method: :delete %></li>
 <% else %>
-    <li>書き込む</li>
+    <li><%= link_to "トップページ", root_path %></li>
+    <li><%= link_to "公開ページ", "/courses" %></li>
     <li>マイページ</li>
+    <li>書き込む</li>
     <li><%= link_to "サインイン", new_user_session_path %></li>
 <% end %>
 
@@ -32,29 +36,34 @@
 <div class="A">
     <div class="box3">
 
-<article class="kiji">
-<p>広告ルート</p>
-    <%= link_to "　→　マイルートに加える", "/courses" %>
-    
-<p>広告ルート</p>
-<p>　→　マイルートに加える</p>
-<p>広告ルート</p>
-<p>　→　マイルートに加える</p>
-<p>広告ルート</p>
-<p>　→　マイルートに加える</p>
-<p>広告ルート</p>
-<p>　→　マイルートに加える</p>
-<p>広告ルート</p>
-<p>　→　マイルートに加える</p>
-<hr>
+
+<% @official.each do |ofc| %>
+<article class="special">
+    <p>タイトル：<%= ofc.title %></p>
+    <p>nickname：［<%= ofc.user.nickname %>］</p>
+    <p>コースID：<%= ofc.id %></p>
+    <p><%= link_to "詳細", "/courses/#{ofc.id}" %>（ → マイルートに加える）</p>
+</article>
+<% end %>
 
 
 
-
-
-
-
-
+<article class="special">
+    <p>広告ルート</p>
+    <p>　→　マイルートに加える</p>
+</article>
+<article class="special">
+    <p>公開中の人気ルート１</p>
+    <p>　→　マイルートに加える</p>
+</article>
+<article class="special">
+    <p>公開中の人気ルート２</p>
+    <p>　→　マイルートに加える</p>
+</article>
+<article class="special">
+    <p>広告ルート</p>
+    <p>　→　マイルートに加える</p>
+</article>
 
 
 
@@ -62,28 +71,32 @@
 <div>
     ページネーション
 </div>
-<hr>
 
-</article>
-    </div>
+</div>
 
 
 <!-- -------------------------　サイドバー　------------------------- -->
 <div class="box4">
-        
-検索ボックス
 
-</div>
-	
+<div class="search-box">       
+検索ボックス
+</div> 
+
+
 	<aside class="sidemenu">
 		<h1>マイページ</h1>
+		<hr>
 		<ul>
-		<li><a href="#">わかりやすい地図の読み方</a></li>
-		<li><a href="#">苗から始めるトマト作り</a></li>
-		<li><a href="#">料理とスマホの便利な関係</a></li>
-		<li><a href="#">バッテリーを長持ちさせる技</a></li>
+		<li><a href="#">未踏ルート１</a></li>
+		<li><a href="#">未踏ルート２</a></li>
+		<li><a href="#">未踏ルート３</a></li>
+		<li><a href="#">未踏ルート４</a></li>
+		<hr>
+		<li><a href="#">周遊済ルート１</a></li>
+		<li><a href="#">周遊済ルート２</a></li>
+		<li><a href="#">周遊済ルート３</a></li>
 		</ul>
-		</aside>
+	</aside>
         
     </div>
 </div>

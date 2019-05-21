@@ -76,7 +76,9 @@ gem 'mini_magick'
 
 gem 'aws-sdk-s3'
 
-
+group :production do
+  gem 'rails_12factor'
+end
 
 
 

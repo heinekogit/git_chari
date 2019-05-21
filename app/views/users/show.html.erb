@@ -39,10 +39,18 @@
 
 <% @courses.each do |cs| %>
 <article class="kiji">
-    <p>タイトル：<%= cs.title %></p>
-    <p>場　　所：<%= cs.place %></p>
+     <p>タイトル：<%= cs.title %></p>
+    <p>地　　域：<%= cs.place %></p>
+    <p>地　　図：<%= cs.map %></p>
     <p>詳　　細：<%= cs.detail %></p>
     <p>距　　離：<%= cs.distance %>km</p>
+    <p>日　　付：<%= cs.record_date %></p>
+    <p>nickname：<%= cs.user.nickname %></p>
+    <p>　I D　　：<%= cs.id %></p>
+     <p><%= link_to "修正する", "/courses/#{cs.id}/edit" %></p>
+     
+    <p><%= link_to "詳細", "/courses/#{cs.id}" %></p>   <!-- showの表示（showは書かなくてよい） -->
+
 
 </article>
 <% end %>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="user-scalable=no,initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<title>GPS Tracker</title>
+		<link rel="stylesheet" href="css/main.css" type="text/css" media="all">
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBs5SzjnpO0CBnZkjT3wlODSiF2_VqgjN4"></script>
+
+</head>
+	<body>
+
+
+<div id="myMap"></div>
+
+<div>
+<form>
+			<input type="button" value="記録スタート" id="startTrack">
+			<input type="button" value="記録ストップ" id="stopTrack">
+			<input type="button" value="記録をストック" id="stockTrack">
+
+			<input type="button" value="軌跡を消去" id="clearTrack">
+</form>
+</div>
+
+<div id="stat">---</div>
+
+
+<script type="text/javascript" src="js/gpstrack_kae.js"></script>
+
+
+
+	</body>
+</html>

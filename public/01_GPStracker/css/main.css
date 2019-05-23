@@ -1,0 +1,40 @@
+body {
+	width: 320px;
+	height:480px;
+	background-color : white;
+}
+#myMap {
+	position : absolute;
+	left : 0px;
+	top: 0px;
+	width: 300px;
+	height: 300px;
+}
+
+#startTrack {
+	position : absolute;
+	left : 10px;
+	top: 310px;
+}
+#stopTrack {
+	position : absolute;
+	left : 10px;
+	top: 340px;
+}
+#stockTrack {
+	position : absolute;
+	left : 10px;
+	top: 370px;
+}
+#clearTrack {
+	position : absolute;
+	left : 10px;
+	top: 400px;
+}
+
+
+#stat {
+	position : absolute;
+	left : 20px;
+	top: 430px;
+}

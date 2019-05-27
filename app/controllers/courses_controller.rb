@@ -1,4 +1,6 @@
 class CoursesController < ApplicationController
+
+#   include ActionController::Cookies # ココを追記!
     
     def index
         # @course = Course.all
@@ -39,6 +41,12 @@ class CoursesController < ApplicationController
         @copied.user_id = current_user.id
         @copied.save
         # puts @copied.title + "、だね"
+        if cookies[:trans1].present? then
+            puts cookies[:trans1] + "、だよねだよね"
+        else
+            puts "ないんやけど"
+        end
+        
         redirect_to :root
     end
     

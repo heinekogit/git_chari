@@ -1,6 +1,6 @@
 body {
 	width: 320px;
-	height:480px;
+	height:600px;
 	background-color : white;
 }
 #myMap {
@@ -31,10 +31,20 @@ body {
 	left : 10px;
 	top: 400px;
 }
+#cookieTransfer {
+	position : absolute;
+	left : 10px;
+	top: 430px;
+}
 
 
 #stat {
 	position : absolute;
 	left : 20px;
-	top: 430px;
+	top: 460px;
+}
+#kukie {
+	position : absolute;
+	left : 20px;
+	top: 500px;
 }

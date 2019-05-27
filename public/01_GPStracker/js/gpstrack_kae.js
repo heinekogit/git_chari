@@ -12,6 +12,7 @@ var myPath;	// 連続直線を描画するための変数
 // 現在地の緯度、経度を表示
 
 
+
 navigator.geolocation.watchPosition(
 	function(position){
 		lat = position.coords.latitude;
@@ -57,6 +58,19 @@ function drawPolyline(){
 }
 
 
+// クッキーテスト -----------------------------------------
+document.getElementById("cookieTransfer").addEventListener("click",
+	function() {
+
+		var trans1 = "testtesttesttesttesttesttesttest";
+		document.cookie = 'mem2='+trans1;		//通った！！
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																	
+		document.getElementById("kukie").innerHTML = trans1;
+
+		}
+);
+
+
 // ボタンがクリックされたら記録をスタート -----------------------------------------
 document.getElementById("startTrack").addEventListener("click",
 	function(){
@@ -86,17 +100,29 @@ document.getElementById("stopTrack").addEventListener("click",
 		var res = confirm("記録をストップしますか？");
     if( res == true ) {
         // OKなら移動
-				alert("記録をストップします");
+				var res_re = confirm("記録を保存しますか？");
+		    if( res_re == true ) {
+					// document.write(pos.toString());		//成功した。次へ。
+					// cookieを使いRailsに変数を渡すつもり
+					// document.cookie = 'data1=123';		//オリジナル
+					data1 = pos.toString();
+					document.cookie = 'data1';
+					// location.href=’/courses/’;
 
-				// setItem("posData", pos.toString());	// 文字列に変換し保存
+					}
+			    else {
+			        // キャンセルならアラートボックスを表示
+			        alert("記録を削除します");
+			    };
 
-				// document.write(line);
-				document.write(pos.toString());
+
+
+
     }
     else {
         // キャンセルならアラートボックスを表示
         alert("キャンセルします");
-    }
+    };
 
 
 		// ページ切り換え時にローカルストレージに座標値を保存 -----------------------------
